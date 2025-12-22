@@ -15,8 +15,6 @@ from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-y_pred = [1, 0, 2, 1, 1]
-y_test = [1, 0, 2, 1, 1]
-cm = confusion_matrix(y_pred, y_test)
+cm = confusion_matrix(y_test, y_pred)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm)
 disp.plot().figure_.savefig('confusion_matrix.png')
