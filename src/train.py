@@ -18,3 +18,5 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 cm = confusion_matrix(y_test, y_pred)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm)
 disp.plot().figure_.savefig('confusion_matrix.png')
+os.makedirs("outputs", exist_ok=True)
+joblib.dump(model, "outputs/model.joblib")
